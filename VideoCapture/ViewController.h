@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
-#import "CameraCaptureOperation.h"
 #import <GameKit/GameKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController <GKPeerPickerControllerDelegate, GKSessionDelegate, GKMatchmakerViewControllerDelegate, GKMatchDelegate>
+@interface ViewController : UIViewController <GKPeerPickerControllerDelegate, GKSessionDelegate, GKMatchmakerViewControllerDelegate, GKMatchDelegate, GKGameCenterControllerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
+@property (retain, nonatomic) IBOutlet UIButton *connectBtn;
+@property (nonatomic, retain) IBOutlet UIImageView *aImageView;
 
-@property(nonatomic, strong) NSDate *timingDate;
 @end

@@ -18,11 +18,15 @@
 		5231EE4516EACDAC0097D715 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5231EE4416EACDAC0097D715 /* Default-568h@2x.png */; };
 		5231EE4816EACDAC0097D715 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5231EE4716EACDAC0097D715 /* ViewController.m */; };
 		5231EE4B16EACDAC0097D715 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5231EE4916EACDAC0097D715 /* ViewController.xib */; };
-		5231EE5316EACE250097D715 /* CameraCaptureOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5231EE5216EACDC80097D715 /* CameraCaptureOperation.m */; };
 		5231EE5516EACE440097D715 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5231EE5416EACE440097D715 /* CoreVideo.framework */; };
 		5231EE5716EACE4A0097D715 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5231EE5616EACE4A0097D715 /* CoreMedia.framework */; };
 		5231EE5916EACE510097D715 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5231EE5816EACE510097D715 /* AVFoundation.framework */; };
 		5272538F16F2A33600932CAD /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5272538E16F2A33600932CAD /* GameKit.framework */; };
+		52CBD3C017EB9E9600910B59 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CBD3BF17EB9E9600910B59 /* CoreImage.framework */; };
+		52CBD3C517EBA40300910B59 /* panda-icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CBD3C117EBA40300910B59 /* panda-icon-60.png */; };
+		52CBD3C617EBA40300910B59 /* panda-icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CBD3C217EBA40300910B59 /* panda-icon-120.png */; };
+		52CBD3C717EBA40300910B59 /* panda-icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CBD3C317EBA40300910B59 /* panda-icon-57.png */; };
+		52CBD3C817EBA40300910B59 /* panda-icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CBD3C417EBA40300910B59 /* panda-icon-114.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,12 +46,15 @@
 		5231EE4616EACDAC0097D715 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5231EE4716EACDAC0097D715 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5231EE4A16EACDAC0097D715 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		5231EE5116EACDC80097D715 /* CameraCaptureOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraCaptureOperation.h; sourceTree = "<group>"; };
-		5231EE5216EACDC80097D715 /* CameraCaptureOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraCaptureOperation.m; sourceTree = "<group>"; };
 		5231EE5416EACE440097D715 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		5231EE5616EACE4A0097D715 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		5231EE5816EACE510097D715 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5272538E16F2A33600932CAD /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		52CBD3BF17EB9E9600910B59 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		52CBD3C117EBA40300910B59 /* panda-icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panda-icon-60.png"; sourceTree = "<group>"; };
+		52CBD3C217EBA40300910B59 /* panda-icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panda-icon-120.png"; sourceTree = "<group>"; };
+		52CBD3C317EBA40300910B59 /* panda-icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panda-icon-57.png"; sourceTree = "<group>"; };
+		52CBD3C417EBA40300910B59 /* panda-icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panda-icon-114.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CBD3C017EB9E9600910B59 /* CoreImage.framework in Frameworks */,
 				5272538F16F2A33600932CAD /* GameKit.framework in Frameworks */,
 				5231EE5916EACE510097D715 /* AVFoundation.framework in Frameworks */,
 				5231EE5716EACE4A0097D715 /* CoreMedia.framework in Frameworks */,
@@ -71,6 +79,7 @@
 		5231EE2216EACDAC0097D715 = {
 			isa = PBXGroup;
 			children = (
+				52CBD3BF17EB9E9600910B59 /* CoreImage.framework */,
 				5231EE3416EACDAC0097D715 /* VideoCapture */,
 				5231EE2D16EACDAC0097D715 /* Frameworks */,
 				5231EE2C16EACDAC0097D715 /* Products */,
@@ -102,8 +111,6 @@
 		5231EE3416EACDAC0097D715 /* VideoCapture */ = {
 			isa = PBXGroup;
 			children = (
-				5231EE5116EACDC80097D715 /* CameraCaptureOperation.h */,
-				5231EE5216EACDC80097D715 /* CameraCaptureOperation.m */,
 				5231EE3D16EACDAC0097D715 /* AppDelegate.h */,
 				5231EE3E16EACDAC0097D715 /* AppDelegate.m */,
 				5231EE4616EACDAC0097D715 /* ViewController.h */,
@@ -117,6 +124,10 @@
 		5231EE3516EACDAC0097D715 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				52CBD3C117EBA40300910B59 /* panda-icon-60.png */,
+				52CBD3C217EBA40300910B59 /* panda-icon-120.png */,
+				52CBD3C317EBA40300910B59 /* panda-icon-57.png */,
+				52CBD3C417EBA40300910B59 /* panda-icon-114.png */,
 				5231EE3616EACDAC0097D715 /* VideoCapture-Info.plist */,
 				5231EE3716EACDAC0097D715 /* InfoPlist.strings */,
 				5231EE3A16EACDAC0097D715 /* main.m */,
@@ -184,6 +195,10 @@
 				5231EE4316EACDAC0097D715 /* Default@2x.png in Resources */,
 				5231EE4516EACDAC0097D715 /* Default-568h@2x.png in Resources */,
 				5231EE4B16EACDAC0097D715 /* ViewController.xib in Resources */,
+				52CBD3C517EBA40300910B59 /* panda-icon-60.png in Resources */,
+				52CBD3C617EBA40300910B59 /* panda-icon-120.png in Resources */,
+				52CBD3C717EBA40300910B59 /* panda-icon-57.png in Resources */,
+				52CBD3C817EBA40300910B59 /* panda-icon-114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +212,6 @@
 				5231EE3B16EACDAC0097D715 /* main.m in Sources */,
 				5231EE3F16EACDAC0097D715 /* AppDelegate.m in Sources */,
 				5231EE4816EACDAC0097D715 /* ViewController.m in Sources */,
-				5231EE5316EACE250097D715 /* CameraCaptureOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +294,13 @@
 		5231EE4F16EACDAC0097D715 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoCapture/VideoCapture-Prefix.pch";
 				INFOPLIST_FILE = "VideoCapture/VideoCapture-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -295,7 +311,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoCapture/VideoCapture-Prefix.pch";
 				INFOPLIST_FILE = "VideoCapture/VideoCapture-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
