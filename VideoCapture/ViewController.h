@@ -11,7 +11,10 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface ViewController : UIViewController <GKPeerPickerControllerDelegate, GKSessionDelegate, GKMatchmakerViewControllerDelegate, GKMatchDelegate, GKGameCenterControllerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
+
 @property (retain, nonatomic) IBOutlet UIButton *connectBtn;
 @property (nonatomic, retain) IBOutlet UIImageView *aImageView;
+@property (retain, nonatomic) IBOutlet UIButton *closeSharingBtn;
+@property (retain, nonatomic) IBOutlet UIView *videosView;
 
 @end

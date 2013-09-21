@@ -36,6 +36,8 @@
 
 @synthesize timingDate = _timingDate;
 @synthesize aImageView = _aImageView;
+@synthesize closeSharingBtn = _closeSharingBtn;
+@synthesize videosView = _videosView;
 
 #pragma mark - Methods
 - (void)viewDidLoad
@@ -46,15 +48,20 @@
     _isMatchStarted = NO;
     self.timingDate = [NSDate date];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showVideoFrame:) name:@"VideoFrameDidReceived" object:nil];
-    
     //disable auto lock
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    
+    [self setupCaptureSession];
     
     //_localPlayer = [GKlocalPlayer _localPlayer];
     //[self auth_localPlayer];
 
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willResignActive) name:@"WillResignActive" object:[UIApplication sharedApplication]];
+}
+
+- (void)willResignActive
+{
+    [self stopSharing];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -69,9 +76,31 @@
 
 - (IBAction)onConnectTap:(id)sender
 {
-
-    //[self setupCaptureSession];
     [self startPicker];
+}
+
+- (void)stopSharing
+{
+    [_videosView setHidden:YES];
+    [_AVSession stopRunning];
+    if(_gameSession != nil){
+        [_gameSession disconnectFromAllPeers];
+        
+        [_gameSession setAvailable:NO];
+        [_gameSession setDelegate:nil];
+        [_gameSession setDataReceiveHandler:nil withContext:NULL];
+        
+        _gameSession = nil;
+        [_gameSession release];
+    }
+    _isSendData = NO;
+}
+
+- (void)startSharing
+{
+    [_videosView setHidden:NO];
+    [_AVSession startRunning];
+    _isSendData = YES;
 }
 
 #pragma mark - GameKit Peer Picker
@@ -103,11 +132,13 @@
 	_gamePeerID = peerID;
 	
 	// Make sure we have a reference to the game session and it is set up
-	_gameSession = session; // retain
+	_gameSession = session;
+    [_gameSession setDisconnectTimeout:2.0];
+    [_gameSession setAvailable:YES];
 	_gameSession.delegate = self;
 	[_gameSession setDataReceiveHandler:self withContext:NULL];
 	
-    [self setupCaptureSession];
+    [self startSharing];
     
 	// Done with the Peer Picker so dismiss it.
 	[picker dismiss];
@@ -140,7 +171,6 @@
             
             UIImage *aImage = [UIImage imageWithData:data];
             [_aImageView setImage:aImage];
-            [_aImageView setHidden:NO];
         }
     }
 }
@@ -158,10 +188,8 @@
 
 - (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state
 {
-    if(state == GKPeerStateDisconnected){
-        [_aImageView setHidden:YES];
-        [session disconnectFromAllPeers];
-        [_AVSession stopRunning];
+    if(state == GKPeerStateDisconnected || state == GKPeerStateUnavailable){
+        [self stopSharing];
     }
 }
 
@@ -200,9 +228,6 @@
     
     // Specify the pixel format
     output.videoSettings = [NSDictionary dictionaryWithObject: [NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey];
-    
-    // Start the session running to start the flow of data
-    [_AVSession startRunning];
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
@@ -335,11 +360,15 @@
 - (void)dealloc {
     [_connectBtn release];
     [_aImageView release];
+    [_closeSharingBtn release];
+    [_videosView release];
     [super dealloc];
 }
 - (void)viewDidUnload {
     [self setConnectBtn:nil];
     _aImageView = nil;
+    [self setCloseSharingBtn:nil];
+    [self setVideosView:nil];
     [super viewDidUnload];
 }
 @end

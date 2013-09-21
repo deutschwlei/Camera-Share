@@ -79,7 +79,6 @@
 		5231EE2216EACDAC0097D715 = {
 			isa = PBXGroup;
 			children = (
-				52CBD3BF17EB9E9600910B59 /* CoreImage.framework */,
 				5231EE3416EACDAC0097D715 /* VideoCapture */,
 				5231EE2D16EACDAC0097D715 /* Frameworks */,
 				5231EE2C16EACDAC0097D715 /* Products */,
@@ -97,6 +96,7 @@
 		5231EE2D16EACDAC0097D715 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52CBD3BF17EB9E9600910B59 /* CoreImage.framework */,
 				5272538E16F2A33600932CAD /* GameKit.framework */,
 				5231EE5816EACE510097D715 /* AVFoundation.framework */,
 				5231EE5616EACE4A0097D715 /* CoreMedia.framework */,
