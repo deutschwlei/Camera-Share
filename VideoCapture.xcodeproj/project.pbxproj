@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22F8813917EE06F9004EF599 /* PandaButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8813817EE06F9004EF599 /* PandaButton.m */; };
 		5231EE2F16EACDAC0097D715 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5231EE2E16EACDAC0097D715 /* UIKit.framework */; };
 		5231EE3116EACDAC0097D715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5231EE3016EACDAC0097D715 /* Foundation.framework */; };
 		5231EE3316EACDAC0097D715 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5231EE3216EACDAC0097D715 /* CoreGraphics.framework */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22F8813717EE06F9004EF599 /* PandaButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaButton.h; sourceTree = "<group>"; };
+		22F8813817EE06F9004EF599 /* PandaButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaButton.m; sourceTree = "<group>"; };
 		5231EE2B16EACDAC0097D715 /* VideoCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5231EE2E16EACDAC0097D715 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5231EE3016EACDAC0097D715 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 				5231EE4716EACDAC0097D715 /* ViewController.m */,
 				5231EE4916EACDAC0097D715 /* ViewController.xib */,
 				5231EE3516EACDAC0097D715 /* Supporting Files */,
+				22F8813717EE06F9004EF599 /* PandaButton.h */,
+				22F8813817EE06F9004EF599 /* PandaButton.m */,
 			);
 			path = VideoCapture;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				5231EE3B16EACDAC0097D715 /* main.m in Sources */,
 				5231EE3F16EACDAC0097D715 /* AppDelegate.m in Sources */,
 				5231EE4816EACDAC0097D715 /* ViewController.m in Sources */,
+				22F8813917EE06F9004EF599 /* PandaButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +304,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoCapture/VideoCapture-Prefix.pch";
 				INFOPLIST_FILE = "VideoCapture/VideoCapture-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -311,7 +317,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoCapture/VideoCapture-Prefix.pch";
 				INFOPLIST_FILE = "VideoCapture/VideoCapture-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

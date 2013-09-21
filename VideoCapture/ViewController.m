@@ -79,6 +79,11 @@
     [self startPicker];
 }
 
+- (IBAction)onCloseSharingTap:(id)sender
+{
+    [self stopSharing];
+}
+
 - (void)stopSharing
 {
     [_videosView setHidden:YES];
@@ -213,8 +218,9 @@
     
     // Create a device input with the device and add it to the session.
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:nil];
-    [_AVSession addInput:input];
-    
+    if(input){
+        [_AVSession addInput:input];
+    }
     // Create a VideoDataOutput and add it to the session
     AVCaptureVideoDataOutput *output = [[[AVCaptureVideoDataOutput alloc] init] autorelease];
     [_AVSession addOutput:output];
@@ -251,7 +257,7 @@
             
 
             //send image data to the other device
-            [_gameSession sendData:UIImageJPEGRepresentation(_frameImage, 0.1) toPeers:[NSArray arrayWithObjects:_gamePeerID,nil] withDataMode:GKSendDataReliable error:nil];
+            [_gameSession sendData:UIImageJPEGRepresentation(_frameImage, 0.6) toPeers:[NSArray arrayWithObjects:_gamePeerID,nil] withDataMode:GKSendDataReliable error:nil];
             
             CFRelease(sampleBuffer);
         });
