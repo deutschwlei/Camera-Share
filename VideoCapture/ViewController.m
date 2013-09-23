@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 {
@@ -38,6 +39,7 @@
 @synthesize aImageView = _aImageView;
 @synthesize closeSharingBtn = _closeSharingBtn;
 @synthesize videosView = _videosView;
+@synthesize videoPreviewView = _videoPreviewView;
 
 #pragma mark - Methods
 - (void)viewDidLoad
@@ -50,6 +52,16 @@
     
     //disable auto lock
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    
+    //add rounded top left corner to view
+    _videoPreviewView.layer.masksToBounds = YES;
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.frame = _videoPreviewView.bounds;
+    UIBezierPath *roundedPath = [UIBezierPath bezierPathWithRoundedRect:maskLayer.bounds byRoundingCorners:UIRectCornerTopLeft cornerRadii:CGSizeMake(5.0, 5.0)];
+    maskLayer.fillColor = [[UIColor whiteColor] CGColor];
+    maskLayer.backgroundColor = [[UIColor clearColor] CGColor];
+    maskLayer.path = [roundedPath CGPath];
+    _videoPreviewView.layer.mask = maskLayer;
     
     [self setupCaptureSession];
     
@@ -234,6 +246,12 @@
     
     // Specify the pixel format
     output.videoSettings = [NSDictionary dictionaryWithObject: [NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey];
+    
+    //add video preview layer
+    AVCaptureVideoPreviewLayer *previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:_AVSession];
+    previewLayer.frame = _videoPreviewView.bounds;
+    previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    [_videoPreviewView.layer addSublayer:previewLayer];
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection

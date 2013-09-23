@@ -16,5 +16,6 @@
 @property (nonatomic, retain) IBOutlet UIImageView *aImageView;
 @property (retain, nonatomic) IBOutlet UIButton *closeSharingBtn;
 @property (retain, nonatomic) IBOutlet UIView *videosView;
+@property (retain, nonatomic) IBOutlet UIView *videoPreviewView;
 
 @end

@@ -23,6 +23,7 @@
 		5231EE5716EACE4A0097D715 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5231EE5616EACE4A0097D715 /* CoreMedia.framework */; };
 		5231EE5916EACE510097D715 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5231EE5816EACE510097D715 /* AVFoundation.framework */; };
 		5272538F16F2A33600932CAD /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5272538E16F2A33600932CAD /* GameKit.framework */; };
+		52A33CF317F10458006CEF16 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A33CF217F10458006CEF16 /* QuartzCore.framework */; };
 		52CBD3C017EB9E9600910B59 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CBD3BF17EB9E9600910B59 /* CoreImage.framework */; };
 		52CBD3C517EBA40300910B59 /* panda-icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CBD3C117EBA40300910B59 /* panda-icon-60.png */; };
 		52CBD3C617EBA40300910B59 /* panda-icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CBD3C217EBA40300910B59 /* panda-icon-120.png */; };
@@ -53,6 +54,7 @@
 		5231EE5616EACE4A0097D715 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		5231EE5816EACE510097D715 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5272538E16F2A33600932CAD /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		52A33CF217F10458006CEF16 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		52CBD3BF17EB9E9600910B59 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		52CBD3C117EBA40300910B59 /* panda-icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panda-icon-60.png"; sourceTree = "<group>"; };
 		52CBD3C217EBA40300910B59 /* panda-icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panda-icon-120.png"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A33CF317F10458006CEF16 /* QuartzCore.framework in Frameworks */,
 				52CBD3C017EB9E9600910B59 /* CoreImage.framework in Frameworks */,
 				5272538F16F2A33600932CAD /* GameKit.framework in Frameworks */,
 				5231EE5916EACE510097D715 /* AVFoundation.framework in Frameworks */,
@@ -99,6 +102,7 @@
 		5231EE2D16EACDAC0097D715 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52A33CF217F10458006CEF16 /* QuartzCore.framework */,
 				52CBD3BF17EB9E9600910B59 /* CoreImage.framework */,
 				5272538E16F2A33600932CAD /* GameKit.framework */,
 				5231EE5816EACE510097D715 /* AVFoundation.framework */,
