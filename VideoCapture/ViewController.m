@@ -275,7 +275,7 @@
             
 
             //send image data to the other device
-            [_gameSession sendData:UIImageJPEGRepresentation(_frameImage, 0.6) toPeers:[NSArray arrayWithObjects:_gamePeerID,nil] withDataMode:GKSendDataReliable error:nil];
+            [_gameSession sendData:UIImageJPEGRepresentation(_frameImage, 0.2) toPeers:[NSArray arrayWithObjects:_gamePeerID,nil] withDataMode:GKSendDataReliable error:nil];
             
             CFRelease(sampleBuffer);
         });
